@@ -17,5 +17,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: pdfs
-          path: lectures/L*.pdf lectures/notebook.pdf
+          path: |
+	    lectures/L*.pdf
+	    lectures/notebook.pdf
 
