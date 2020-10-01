@@ -7,9 +7,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Compile
-        uses: dante-ev/latex-action@master
+        uses: patricklam/make-latex-action@v0.3.0
         with:
-          root_file: L01.tex
           working_directory: lectures
         env:
           DEFAULT_BRANCH: main
@@ -17,6 +16,6 @@ jobs:
       - name: Upload PDF
         uses: actions/upload-artifact@v2
         with:
-          name: L01
-          path: lectures/L01.pdf
+          name: pdfs
+          path: lectures/L*.pdf lectures/notebook.pdf
 
