@@ -14,3 +14,9 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: L01
+          path: L01.pdf
+
