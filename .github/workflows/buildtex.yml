@@ -18,6 +18,6 @@ jobs:
         with:
           name: pdfs
           path: |
-	    lectures/L*.pdf
-	    lectures/notebook.pdf
+            lectures/L*.pdf
+            lectures/notebook.pdf
 
