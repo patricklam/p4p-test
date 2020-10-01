@@ -1,0 +1,16 @@
+name: Build-LaTeX
+on: [push]
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Compile
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: L01.tex
+          working_directory: lectures
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
